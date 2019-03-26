@@ -1,18 +1,18 @@
 # dotnet-get-origin-uid (.NET Core 2.2) / Solution to retrieve UID for Origin.
 
 ## To Run:
-  1. On your initial run, use getPsnRefreshToken("ticketUuid", "_2fa") to get the value of a refesh_token.
-  2. Use the value of the refresh_token to run getPsnUid("user", "refreshToken") from now on (this process can be repeated as necessary).
+ 1. On your initial run, use getOriginAccessToken("email", "password") to get the value of an access_token.
+ 2. Use the value of the access_token to run getOriginUid("user", "accessToken") from now on (this process can be repeated as necessary).
 
 ### Initial Run:
 ```sh
-getPsnRefreshToken("ticketUuid", "_2fa");
+getOriginAccessToken("email", "password");
 Console.ReadKey();
 ```
 
 ### Future Runs:
 ```sh
-getPsnUid("user", "refreshToken");
+getOriginUid("user", "accessToken");
 Console.ReadKey();
 ```
 
